@@ -11,10 +11,10 @@ const image = require('./controllers/image');
 const db = knex({
   client: 'pg',
     connection: {
-        host: 'dpg-chedh65269v75d3paqqg-a',
-        user: 'mmorgan',
-        password: 'tvOX7LhhiK7qLdRIIVGPWydWzlRd76vc',
-        database: 'smart_brain_4nln'
+        host: process.env.db-host,
+        user: process.env.db-user,
+        password: process.env.db-pass,
+        database: process.env.db-database
   }
 });
 
