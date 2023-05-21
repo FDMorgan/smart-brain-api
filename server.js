@@ -11,12 +11,12 @@ const image = require('./controllers/image');
 const db = knex({
   client: 'pg',
     connection: {
-        connectionString : process.env.db-url,
+        connectionString : process.env.DATABASE_URL,
         ssl: { rejectUnauthorized: false },
-        host: process.env.db-host,
-        user: process.env.db-user,
-        password: process.env.db-pass,
-        database: process.env.db-database
+        host: process.env.DATABASE_HOST,
+        user: process.env.DATABASE_USER,
+        password: process.env.DATABASE_PASS,
+        database: process.env.DATABASE_DB
   }
 });
 
