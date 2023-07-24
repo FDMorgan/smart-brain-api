@@ -12,12 +12,13 @@ const auth = require('./controllers/authorization')
 const db = knex({
   client: 'pg',
     connection: {
-      connectionString: process.env.DATABASE_URL,
+      connectionString: process.env.DB_URL,
       ssl: { rejectUnauthorized: false },
-      host: process.env.DATABASE_HOST,
-      user: process.env.DATABASE_USER,
-      password: process.env.DATABASE_PW,
-      database: process.env.DATABASE_DB
+      host: process.env.DB_HOST,
+      port: 5432,
+      user: process.env.DB_USER,
+      password: process.env.DB_PW,
+      database: process.env.DB_DB
     }
 });
 
