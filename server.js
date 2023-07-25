@@ -11,15 +11,7 @@ const auth = require('./controllers/authorization')
 
 const db = knex({
   client: 'pg',
-  connection: {
-    connectionString: process.env.DB_URL,
-    ssl: { rejectUnauthorized: false },
-    database: process.env.DB_DB,
-    host: process.env.DB_HOST,
-    password: process.env.DB_PW,
-    user: process.env.DB_USER,
-    port: 5432
-  }
+  connection: process.env.DB_URL
 });
 
 const app = express();
