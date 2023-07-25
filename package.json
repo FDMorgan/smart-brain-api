@@ -19,6 +19,7 @@
     "jsonwebtoken": "^9.0.1",
     "knex": "^2.3.0",
     "pg": "^8.8.0",
+    "react-scripts": "^5.0.1",
     "redis": "^2.8.0"
   },
   "devDependencies": {
