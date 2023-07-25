@@ -22,8 +22,9 @@ const handleRegister = (req, res, db, bcrypt) => {
             joined: new Date()
           })
           .then(user => {
-            session.createSessions(user[0])
-              .then(session => res.json(session))
+            // session.createSessions(user[0])
+            //   .then(session => res.json(session))
+            res.json(user[0])
           })
       })
       .then(trx.commit)
